@@ -29,6 +29,19 @@ def about():
 # The functions below should be applicable to all Flask apps.
 ###
 
+@app.route('/profile')
+def profile():
+    name = "Ronaldo Salmon"
+    username = "ronopedia"
+    parish, country = "St. Andrew", "Jamaica"
+    bio = "I am a final year Computing major who works as a Information Technology Support Analyst."
+    posts, follows, followers = 10, 100, 100
+
+    unformatted_date = datetime.datetime.now()
+    date_joined = format_date_joined(unformatted_date)
+
+    return render_template('profile.html', name=name, username=username, parish=parish, country=country, date_joined=date_joined, bio=bio, posts=posts, follows=follows, followers=followers)
+
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):
     """Send your static text file."""
