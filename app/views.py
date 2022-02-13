@@ -10,6 +10,11 @@ from flask import render_template, request, redirect, url_for, flash
 
 import datetime
 
+# Function for fprmat_date
+def format_date_joined(unformatted_date):
+    formatted_date = unformatted_date.strftime("%B, %Y")
+    return formatted_date
+
 ###
 # Routing for your application.
 ###
@@ -35,7 +40,7 @@ def profile():
     name = "Ronaldo Salmon"
     username = "ronopedia"
     parish, country = "St. Andrew", "Jamaica"
-    bio = "I am a final year Computing major who works as an Information Technology Support Analyst."
+    bio = "I am a final year Computing major who also works as an Information Technology Support Analyst."
     posts, follows, followers = 10, 100, 100
 
     unformatted_date = datetime.datetime.now()
