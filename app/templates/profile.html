@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="card">
+    <div class="top">
+        <img src="{{ url_for('static', filename='ron.jpg') }}" alt="Profile Photo">
+        <h1 id="name">{{ name }}</h1>
+        <p>@<span id="username">{{ username }}</span>
+        <br>{{ parish }}, {{ country }}
+        <br>Joined <span id="date">{{ date_joined }}</span></p>
+    </div>
+
+    <div class="main">
+        <p id="bio">{{ bio }}</p>
+        
+        <div class="details">
+            <div class="columns">
+                <span id="posts">{{ posts }}</span>
+                <p>Posts</p>
+            </div>
+            <div class="columns">
+                <span id="following">{{ follows }}</span>
+                <p>Following</p>
+            </div>
+            <div class="columns">
+                <span id="followers">{{ followers }}</span>
+                <p>Followers</p>
+            </div>
+        </div>
+
+        <button>Follow</button>
+    </div>
+</div>
+
+{% endblock %}
