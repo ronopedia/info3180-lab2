@@ -34,7 +34,7 @@ def profile():
     name = "Ronaldo Salmon"
     username = "ronopedia"
     parish, country = "St. Andrew", "Jamaica"
-    bio = "I am a final year Computing major who works as a Information Technology Support Analyst."
+    bio = "I am a final year Computing major who works as an Information Technology Support Analyst."
     posts, follows, followers = 10, 100, 100
 
     unformatted_date = datetime.datetime.now()
